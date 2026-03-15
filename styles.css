@@ -1,164 +1,87 @@
-/* ===== Google Font (clean professional look) ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-/* ===== Global Reset ===== */
-* {
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0f172a; /* deep navy */
-    color: #e2e8f0; /* soft white */
-    line-height: 1.6;
-}
-
-/* ===== Layout Containers ===== */
-header, main, footer {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* ===== Header ===== */
 header {
+    background: #2c3e50;
+    color: white;
     padding: 2rem 0;
     text-align: center;
-    border-bottom: 1px solid #1e293b;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #38bdf8; /* cyan accent */
-}
-
-header p {
-    margin-top: 0.5rem;
-    font-weight: 300;
-    color: #94a3b8;
-}
-
-/* ===== Navigation ===== */
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    padding: 0;
 }
 
-nav a {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #e2e8f0;
-    font-weight: 500;
-    transition: 0.3s ease;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #38bdf8;
+/* About Section */
+#about {
+    padding: 2rem;
+    background: white;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ===== Sections ===== */
-section {
-    padding: 3rem 0;
-    border-bottom: 1px solid #1e293b;
+#about img {
+    border-radius: 50%; /* Makes your profile photo circular */
+    display: block;
+    margin: 0 auto 15px;
 }
 
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: #38bdf8;
-    position: relative;
+/* Skills Section - The Grid Layout */
+#skills {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 2rem;
 }
 
-/* ===== About Section ===== */
-figure {
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skills-container article {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid #2ecc71; /* Adds a nice green accent top border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Contact & Footer */
+#contact {
     text-align: center;
-    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
-figure img {
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
-    transition: transform 0.3s ease;
-}
-
-figure img:hover {
-    transform: scale(1.05);
-}
-
-figcaption {
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
-
-#about p {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-}
-
-/* ===== Skills Section ===== */
-#skills article {
-    background-color: #1e293b;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#skills article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-#skills ul {
-    list-style: square inside;
-    margin-top: 0.5rem;
-}
-
-#skills li {
-    margin: 0.5rem 0;
-}
-
-/* ===== Contact Section ===== */
-#contact a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* ===== Footer ===== */
 footer {
     text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-    color: #64748b;
-}
-
-/* ===== Responsive Design ===== */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 2rem 0;
-    }
+    padding: 1rem;
+    background: #2c3e50;
+    color: white;
 }
