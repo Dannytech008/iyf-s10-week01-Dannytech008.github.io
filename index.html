@@ -1,56 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Daniel Githinji - Web Developer & Backend Specialist">
+    <title>Daniel Githinji | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
     <header>
-        <h1>Daniel Githinji</h1>
-        <p>Web Developer | Backend Specialist | Computer Science Student</p>
-
-        <nav>
+        <div class="header-content">
+            <h1>Daniel Githinji</h1>
+            <p class="tagline">Web Developer | Backend Specialist | Computer Science Student</p>
+        </div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/DANNYTECH008" target="_blank">GitHub</a></li>
+                <li><a href="https://github.com/DANNYTECH008" target="_blank" rel="noopener">GitHub</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <section id="about">
-            <h2>About Me</h2>
+            <header>
+                <h2>About Me</h2>
+            </header>
+            
+            <div class="about-container">
+                <figure>
+                    <img src="My-photo.jpg" alt="Daniel Githinji Profile Photo" width="200" height="200">
+                    <figcaption>Daniel Githinji</figcaption>
+                </figure>
 
-            <figure>
-                <img src="My-photo.jpg" alt="Daniel Githinji Profile Photo" width="200">
-                <figcaption>Daniel Githinji</figcaption>
-            </figure>
-
-            <p>
-                I am a passionate web developer and university student dedicated to building clean, 
-                functional, and scalable applications. I find great joy in the logic of programming, 
-                whether I’m debugging complex JavaScript arithmetic or optimizing C++ performance.
-            </p>
-            <p>
-                When I'm not coding, I'm usually analyzing football tactics—especially Arsenal's defensive 
-                structures—or collaborating with my teammates on technical projects to sharpen our collective skills.
-            </p>
+                <div class="about-text">
+                    <p>
+                        I am a passionate web developer and university student dedicated to building clean, 
+                        functional, and scalable applications. I find great joy in the logic of programming, 
+                        whether I’m debugging complex JavaScript arithmetic or optimizing C++ performance.
+                    </p>
+                    <p>
+                        Beyond code, I am a strategic thinker who enjoys analyzing football tactics and 
+                        collaborating on technical projects with my teammates. I believe in continuous learning 
+                        and building systems that solve real-world problems.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Technical Expertise</h2>
+        <hr>
 
-            <div class="skills-container">
-                <article>
+        <section id="skills">
+            <header>
+                <h2>Technical Expertise</h2>
+            </header>
+
+            <div class="skills-grid">
+                <article class="skill-card">
                     <h3>Frontend Development</h3>
+                    <p>Building responsive and interactive user interfaces.</p>
                     <ul>
                         <li>HTML5 & CSS3</li>
-                        <li>JavaScript</li>
+                        <li>JavaScript (ES6+)</li>
                         <li>Responsive Web Design</li>
                     </ul>
                 </article>
 
-                <article>
+                <article class="skill-card">
                     <h3>Backend & Languages</h3>
+                    <p>Developing robust server-side logic and high-performance code.</p>
                     <ul>
                         <li>Python</li>
                         <li>C & C++</li>
@@ -58,28 +79,35 @@
                     </ul>
                 </article>
 
-                <article>
-                    <h3>Databases & Tools</h3>
+                <article class="skill-card">
+                    <h3>Databases & DevOps</h3>
+                    <p>Designing secure storage and managing version control.</p>
                     <ul>
-                        <li>MySQL & SQL Management</li>
-                        <li>Git & GitHub Version Control</li>
+                        <li>MySQL & PostgreSQL</li>
+                        <li>Git & GitHub</li>
                         <li>Technical Documentation</li>
                     </ul>
                 </article>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:danygithinji8@gmail.com">danygithinji8@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/DANNYTECH008" target="_blank">github.com/DANNYTECH008</a></p>
-            <p>Phone: +254 729567505</p>
-        </section>
+        <hr>
 
+        <section id="contact">
+            <header>
+                <h2>Get In Touch</h2>
+            </header>
+            <address>
+                <p>Email: <a href="mailto:danygithinji8@gmail.com">danygithinji8@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/DANNYTECH008" target="_blank">github.com/DANNYTECH008</a></p>
+                <p>Phone: +254 729567505</p>
+            </address>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Daniel Githinji. All rights reserved.</p>
+        <p>&copy; 2026 Daniel Githinji. Built with HTML and CSS.</p>
     </footer>
 
 </body>
+</html>
