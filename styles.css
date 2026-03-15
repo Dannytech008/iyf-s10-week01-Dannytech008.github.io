@@ -1,152 +1,88 @@
-/* General Resets */
-* {
-    box-sizing: border-box;
+/* Root variables for themes and consistency */
+:root {
+    --main-bg: #0f172a;
+    --main-text: #e2e8f0;
+    --accent: #38bdf8;
+    --border-radius: 10px;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    /* Main Page Background: Dark */
-    background-color: #0f172a; 
-    color: #e2e8f0;
+/* Reset basic styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Header Styling */
-header {
-    background: linear-gradient(135deg, #065f46 0%, #022c22 100%);
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 1px solid #10b981;
+/* Body styling */
+body {
+    font-family: var(--font-main);
+    color: var(--main-text);
+    background-color: var(--main-bg);
+    line-height: 1.7;
+    min-height: 100vh;
 }
 
-.tagline {
-    font-style: italic;
-    color: #a7f3d0;
-    font-weight: 300;
-}
-
-/* 2x2 Navigation Grid */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 30px auto 0;
-    max-width: 320px; 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-nav ul li a {
-    display: block;
-    background: #064e3b;
-    color: #6ee7b7;
-    padding: 12px;
-    text-decoration: none;
-    border: 1px solid #10b981;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: #10b981;
-    color: #022c22;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-}
-
-/* Main Content Layout */
-main {
-    max-width: 950px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Green Section Background */
-section {
-    background-color: #065f46;
-    margin: 40px 0;
-    padding: 35px;
-    border-radius: 16px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-    border: 1px solid #10b981;
-}
-
-h2 {
-    color: #ecfdf5;
-    border-bottom: 3px solid #10b981;
-    display: inline-block;
-    margin-bottom: 25px;
-    font-size: 1.7rem;
-}
-
-/* About Section */
-.about-container {
+/* Center content for profile layout */
+.main-container {
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
-#about img {
-    border-radius: 15px;
-    border: 2px solid #10b981;
-    transition: 0.3s;
+/* Profile image improvement: circular, clickable, responsive, accessible */
+.profile-link {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(56,189,248,0.13);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.profile-link:focus,
+.profile-link:hover {
+    box-shadow: 0 6px 24px rgba(56,189,248,0.25);
+    outline: 2px solid var(--accent);
+    transform: scale(1.02);
+}
+.profile-img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    background: #fff; /* fallback for transparent PNGs */
+    transition: border-color 0.2s;
 }
 
-#about img:hover {
-    border-color: #6ee7b7;
+/* Example profile details */
+.profile-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
 }
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.skill-card {
-    padding: 25px;
-    background-color: #022c22;
-    border-top: 4px solid #10b981;
-    border-radius: 10px;
-}
-
-.skill-card h3 {
-    margin-top: 0;
-    color: #6ee7b7;
-}
-
-.skill-card ul {
-    color: #a7f3d0;
-}
-
-/* Contact & Footer */
-#contact {
+.profile-bio {
+    font-size: 1rem;
+    color: #cbd5e1;
+    max-width: 350px;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-#contact a {
-    color: #6ee7b7;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 0.9rem;
-    color: #6ee7b7;
-}
-
-/* Responsive View */
+/* Responsive adjustments */
 @media (max-width: 600px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
+    .profile-img {
+        width: 90px;
+        height: 90px;
+    }
+    .profile-name {
+        font-size: 1.4rem;
+    }
+    .profile-bio {
+        font-size: 0.92rem;
     }
 }
